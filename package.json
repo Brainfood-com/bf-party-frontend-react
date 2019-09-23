@@ -6,6 +6,7 @@
   "scripts": {
     "start": "webpack-dev-server --hot --progress --colors",
     "test": "echo \"Error: no test specified\" && exit 1",
+    "transpile": "mkdir -p dist && babel src -d dist --copy-files --source-maps",
     "webpack": "webpack"
   },
   "author": "",
@@ -15,9 +16,17 @@
     "@material-ui/icons": "^3.0.2",
     "bf-moqui-frontend-react": "github:Brainfood-com/bf-moqui-frontend-react#semver:^0",
     "classnames": "^2.2.6",
-    "eformik": "github:Brainfood-com/eformik",
+    "eformik": "github:Brainfood-com/eformik#semver:^0",
     "formik": "^2.0.1-alpha.2",
     "react": "^16.8.6",
     "yup": "^0.27.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.6.2",
+    "@babel/core": "^7.6.2",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/plugin-transform-runtime": "^7.6.2",
+    "@babel/preset-env": "^7.6.2",
+    "@babel/preset-react": "^7.0.0"
   }
 }
